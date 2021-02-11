@@ -24,7 +24,8 @@ const App: React.FC = () => {
                             🔆 Lights &amp; Shadows
                         </NavLink>
                     </li>
-                    <li className="menu_item" style={{ color: "grey" }}>
+                    <li style={{ color: "gray" }}>&nbsp;&nbsp;/&nbsp;</li>
+                    <li className="menu_item">
                         <a
                             href="https://github.com/cedeber/kreemo"
                             target="_blank"
