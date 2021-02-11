@@ -11,7 +11,7 @@ const Cube: React.FC<MeshProps> = (props) => {
 
     const isAnimate = useDatGui("Animate", true);
     const hasWireframe = useDatGui("Wireframe", false);
-    const segments = useDatGui("Wireframe", 100, 30, 300, 1);
+    const segments = useDatGui("Segments", 100, 30, 300, 1);
     const repeat = useDatGui("Repeat", 3, 1, 10, 1);
     const displacementScale = useDatGui("Displacement", 0.15, 0, 1, 0.001);
     const metalness = useDatGui("Metalness", 0.1, 0, 1, 0.001);
