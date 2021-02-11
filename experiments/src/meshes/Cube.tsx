@@ -5,7 +5,6 @@ import type { Mesh } from "three";
 const Cube: React.FC<MeshProps> = (props) => {
     const { clock } = useThree();
     const mesh = useRef<Mesh>();
-    // const { wireframe } = useDatGui("wireframe", false);
 
     useFrame(() => {
         mesh.current!.rotation.x = 0.15 * clock.elapsedTime;
@@ -15,7 +14,6 @@ const Cube: React.FC<MeshProps> = (props) => {
     return (
         <mesh {...props} ref={mesh}>
             <boxBufferGeometry args={[0.75, 0.75, 0.75]} />
-            {/* <meshStandardMaterial wireframe={wireframe} /> */}
         </mesh>
     );
 };
