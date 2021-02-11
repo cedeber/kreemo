@@ -40,3 +40,13 @@ declare module "*.png" {
     const ref: string;
     export default ref;
 }
+
+/* FONTS */
+declare module "*.woff" {
+    const ref: string;
+    export default ref;
+}
+declare module "*.woff2" {
+    const ref: string;
+    export default ref;
+}
