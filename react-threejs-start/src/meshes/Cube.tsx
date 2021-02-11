@@ -6,7 +6,7 @@ import { useDatGui } from "../hooks/useDatGui";
 
 const Cube: React.FC<MeshProps> = (props) => {
     const mesh = useRef<Mesh>();
-    const { wireframe } = useDatGui("wireframe", false);
+    const wireframe = useDatGui("Wireframe", true);
 
     return (
         <mesh {...props} ref={mesh}>
