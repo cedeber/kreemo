@@ -15,8 +15,8 @@ module.exports = {
         polyfillNode: true,
     },
     optimize: {
-        splitting: true,
-        treeshake: true,
-        target: "es2018",
+        // splitting: true,
+        // treeshake: true,
+        // target: "es2018",
     },
 };
