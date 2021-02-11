@@ -2,10 +2,9 @@ import React, { useRef } from "react";
 import { MeshProps, useFrame, useThree } from "react-three-fiber";
 import type { Mesh } from "three";
 
-const Cube: React.FC<MeshProps> = (props) => {
+const Torus: React.FC<MeshProps> = (props) => {
     const { clock } = useThree();
     const mesh = useRef<Mesh>();
-    // const { wireframe } = useDatGui("wireframe", false);
 
     useFrame(() => {
         mesh.current!.rotation.x = 0.15 * clock.elapsedTime;
@@ -14,10 +13,9 @@ const Cube: React.FC<MeshProps> = (props) => {
 
     return (
         <mesh {...props} ref={mesh}>
-            <boxBufferGeometry args={[0.75, 0.75, 0.75]} />
-            {/* <meshStandardMaterial wireframe={wireframe} /> */}
+            <torusBufferGeometry args={[0.3, 0.2, 32, 64]} />
         </mesh>
     );
 };
 
-export { Cube };
+export { Torus };

@@ -1,6 +1,8 @@
 import React from "react";
-import { BrowserRouter, Link, Route, Routes, Navigate } from "react-router-dom";
-import { CubePage } from "./pages/Cube";
+import { BrowserRouter, Route, Routes, Navigate, NavLink } from "react-router-dom";
+import { TexturesPage } from "./pages/Textures";
+import { ShapesPage } from "./pages/Shapes";
+import { LightsPage } from "./pages/Lights";
 
 const App: React.FC = () => {
     return (
@@ -8,16 +10,19 @@ const App: React.FC = () => {
             <nav className="menu">
                 <ul className="menu_items">
                     <li className="menu_item">
-                        <Link to="/">👋 Hello</Link>
+                        <NavLink to="/shapes" activeClassName="active">
+                            💗 2D Shapes
+                        </NavLink>
                     </li>
                     <li className="menu_item">
-                        <Link to="/shapes">💗 2D Shapes</Link>
+                        <NavLink to="/textures" activeClassName="active">
+                            🧱 Textures
+                        </NavLink>
                     </li>
                     <li className="menu_item">
-                        <Link to="/textures">🧱 Textures</Link>
-                    </li>
-                    <li className="menu_item">
-                        <Link to="/lights">🔆 Lights &amp; Shadows</Link>
+                        <NavLink to="/lights" activeClassName="active">
+                            🔆 Lights &amp; Shadows
+                        </NavLink>
                     </li>
                     <li className="menu_item" style={{ color: "grey" }}>
                         <a
@@ -32,17 +37,16 @@ const App: React.FC = () => {
             </nav>
             <Routes>
                 <Route path="/shapes">
-                    <p>Hello, Shapes</p>
+                    <ShapesPage />
                 </Route>
                 <Route path="/textures">
-                    <p>Hello, Textures</p>
+                    <TexturesPage />
                 </Route>
                 <Route path="/lights">
-                    <p>Hello, Lights</p>
+                    <LightsPage />
                 </Route>
                 <Route path="/">
-                    <CubePage />
-                    {/* <Navigate to="/shapes" replace /> */}
+                    <Navigate to="/shapes" replace />
                 </Route>
             </Routes>
         </BrowserRouter>
