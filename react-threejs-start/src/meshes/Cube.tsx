@@ -1,5 +1,4 @@
-import { once } from "ramda";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import type { MeshProps } from "react-three-fiber";
 import type { Mesh } from "three";
 import { useDatGui } from "../hooks/useDatGui";
