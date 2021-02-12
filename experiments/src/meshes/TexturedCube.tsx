@@ -6,7 +6,7 @@ import mapTexture from "../assets/Wool_carpet_pxr128.png";
 import bumpMapTexture from "../assets/Wool_carpet_pxr128_bmp.png";
 import normalMapTexture from "../assets/Wool_carpet_pxr128_normal.png";
 
-const Cube: React.FC<MeshProps> = (props) => {
+const TexturedCube: React.FC<MeshProps> = (props) => {
     const mesh = useRef<Mesh>();
 
     const isAnimate = useDatGui("Animate", true);
@@ -56,4 +56,4 @@ const Cube: React.FC<MeshProps> = (props) => {
     );
 };
 
-export { Cube };
+export { TexturedCube };

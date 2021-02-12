@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { Canvas } from "react-three-fiber";
 import { OrbitControls, PerspectiveCamera, Stats } from "@react-three/drei";
-import { Cube } from "../meshes/TexturedCube";
+import { TexturedCube } from "../meshes/TexturedCube";
 
 const TexturesPage: React.FC = () => {
     return (
@@ -10,7 +10,7 @@ const TexturesPage: React.FC = () => {
             <ambientLight />
             <pointLight position={[10, 10, 10]} />
             <Suspense fallback={null}>
-                <Cube />
+                <TexturedCube />
             </Suspense>
             <PerspectiveCamera makeDefault fov={75} near={0.1} far={100} position={[1, 1, 10]} />
             <OrbitControls enableDamping />
