@@ -6,7 +6,7 @@ module.exports = {
     },
     routes: [{ match: "routes", src: ".*", dest: "/" }],
     plugins: [
-        "@snowpack/plugin-react-refresh",
+        // "@snowpack/plugin-react-refresh",
         "@snowpack/plugin-dotenv",
         "@snowpack/plugin-typescript",
         "@snowpack/plugin-optimize",

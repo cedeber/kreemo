@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, Navigate, NavLink } from "react-router-do
 import { TexturesPage } from "./pages/Textures";
 import { ShapesPage } from "./pages/Shapes";
 import { LightsPage } from "./pages/Lights";
+import { OffscreenPage } from "./pages/Offscreen";
 
 const App: React.FC = () => {
     return (
@@ -11,17 +12,22 @@ const App: React.FC = () => {
                 <ul className="menu_items">
                     <li className="menu_item">
                         <NavLink to="/shapes" activeClassName="active">
-                            💗 2D Shapes
+                            💗 &nbsp;2D Shapes
                         </NavLink>
                     </li>
                     <li className="menu_item">
                         <NavLink to="/textures" activeClassName="active">
-                            🧱 Textures
+                            🧱 &nbsp;Textures
                         </NavLink>
                     </li>
                     <li className="menu_item">
                         <NavLink to="/lights" activeClassName="active">
-                            🔆 Lights &amp; Shadows
+                            🔆 &nbsp;Lights &amp; Shadows
+                        </NavLink>
+                    </li>
+                    <li className="menu_item">
+                        <NavLink to="/offscreen" activeClassName="active">
+                            📺 &nbsp;OffScreen
                         </NavLink>
                     </li>
                     <li style={{ color: "gray" }}>&nbsp;&nbsp;/&nbsp;</li>
@@ -45,6 +51,9 @@ const App: React.FC = () => {
                 </Route>
                 <Route path="/lights">
                     <LightsPage />
+                </Route>
+                <Route path="/offscreen">
+                    <OffscreenPage />
                 </Route>
                 <Route path="/">
                     <Navigate to="/shapes" replace />
