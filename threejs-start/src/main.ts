@@ -1,7 +1,7 @@
 import { Scene, WebGLRenderer, PCFSoftShadowMap, PerspectiveCamera } from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import Stats from "stats.js";
-import "./index.css";
+import "./global.css";
 import { start } from "./app";
 
 const canvas = document.querySelector("canvas.webgl") as HTMLCanvasElement;
