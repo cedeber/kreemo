@@ -2,9 +2,9 @@ import React, { useRef } from "react";
 import { MeshProps, useFrame, useLoader } from "react-three-fiber";
 import { Mesh, MirroredRepeatWrapping, TextureLoader } from "three";
 import { useDatGui } from "../hooks/useDatGui";
-import mapTexture from "../assets/Wool_carpet_pxr128.png";
-import bumpMapTexture from "../assets/Wool_carpet_pxr128_bmp.png";
-import normalMapTexture from "../assets/Wool_carpet_pxr128_normal.png";
+import mapTexture from "../assets/Standard_red_pxr128.jpg";
+import bumpMapTexture from "../assets/Standard_red_pxr128_bmp.jpg";
+import normalMapTexture from "../assets/Standard_red_pxr128_normal.jpg";
 
 const TexturedCube: React.FC<MeshProps> = (props) => {
     const mesh = useRef<Mesh>();

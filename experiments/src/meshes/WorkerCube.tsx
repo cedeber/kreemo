@@ -8,7 +8,7 @@ const WorkerCube: React.FC<MeshProps> = (props) => {
     return (
         <mesh {...props} ref={mesh}>
             <boxBufferGeometry args={[1, 1, 1]} />
-            <meshBasicMaterial wireframe color={0xffffff} />
+            <meshStandardMaterial wireframe color={0xffffff} />
         </mesh>
     );
 };

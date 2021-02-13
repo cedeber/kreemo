@@ -1,9 +1,13 @@
 {
-    "name": "threejs-journey",
+    "name": "kreemo",
     "version": "0.0.0",
+    "private": true,
     "scripts": {
         "dev": "snowpack dev",
-        "build": "snowpack build"
+        "build": "snowpack build",
+        "vite:dev": "vite",
+        "vite:build": "tsc && vite build",
+        "vite:serve": "vite preview"
     },
     "dependencies": {
         "@react-three/drei": "^3.1.0",
@@ -28,8 +32,10 @@
         "@types/react-dom": "^17.0.0",
         "@types/snowpack-env": "^2.3.3",
         "@types/three": "^0.125.0",
+        "@vitejs/plugin-react-refresh": "^1.3.1",
         "snowpack": "^3.0.11",
         "tslib": "^2.1.0",
-        "typescript": "^4.1.3"
+        "typescript": "^4.1.3",
+        "vite": "^2.0.0-beta.69"
     }
 }
