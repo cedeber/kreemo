@@ -12,22 +12,17 @@ const App: React.FC = () => {
                 <ul className="menu_items">
                     <li className="menu_item">
                         <NavLink to="/shapes" activeClassName="active">
-                            💗 &nbsp;2D Shapes
+                            💗 2D Shapes
                         </NavLink>
                     </li>
                     <li className="menu_item">
                         <NavLink to="/textures" activeClassName="active">
-                            🧱 &nbsp;Textures
+                            🧱 Textures
                         </NavLink>
                     </li>
                     <li className="menu_item">
                         <NavLink to="/lights" activeClassName="active">
-                            🔆 &nbsp;Lights &amp; Shadows
-                        </NavLink>
-                    </li>
-                    <li className="menu_item">
-                        <NavLink to="/offscreen" activeClassName="active">
-                            📺 &nbsp;OffScreen
+                            🔆 Lights &amp; Shadows
                         </NavLink>
                     </li>
                     <li style={{ color: "gray" }}>&nbsp;&nbsp;/&nbsp;</li>
