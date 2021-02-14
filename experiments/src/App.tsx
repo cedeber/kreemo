@@ -4,6 +4,7 @@ import { TexturesPage } from "./pages/Textures";
 import { ShapesPage } from "./pages/Shapes";
 import { LightsPage } from "./pages/Lights";
 import { OffscreenPage } from "./pages/Offscreen";
+import { ParticlesPage } from "./pages/Particles";
 
 const App: React.FC = () => {
     return (
@@ -23,6 +24,11 @@ const App: React.FC = () => {
                     <li className="menu_item">
                         <NavLink to="/lights" activeClassName="active">
                             🔆 Lights &amp; Shadows
+                        </NavLink>
+                    </li>
+                    <li className="menu_item">
+                        <NavLink to="/particles" activeClassName="active">
+                            🎉 Particles
                         </NavLink>
                     </li>
                     <li style={{ color: "gray" }}>&nbsp;&nbsp;/&nbsp;</li>
@@ -46,6 +52,9 @@ const App: React.FC = () => {
                 </Route>
                 <Route path="/lights">
                     <LightsPage />
+                </Route>
+                <Route path="/particles">
+                    <ParticlesPage />
                 </Route>
                 <Route path="/offscreen">
                     <OffscreenPage />
