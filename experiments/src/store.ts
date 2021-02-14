@@ -15,7 +15,7 @@ type State = {
 };
 
 const useStore = create<State>((set) => ({
-    gui: new GUI(),
+    gui: new GUI({ width: 320 }),
     cursor: "default",
     setCursor: (cursor: string) => set(() => ({ cursor })),
     position: { x: 0, y: 0 },
