@@ -6,7 +6,7 @@ import mapTexture from "../assets/circle_03.jpg";
 
 const RandomParticles: React.FC<PointsProps> = (props) => {
     const points = useRef<Points>();
-    const count = useDatGui("Particles", 10000, 0, 200000, 100);
+    const count = useDatGui("Particles", 10000, 0, 1000000, 100);
     const positions = useRef(new Float32Array(count * 3));
     const [forceUpdate, setForceUpdate] = useState(0);
 
@@ -15,7 +15,7 @@ const RandomParticles: React.FC<PointsProps> = (props) => {
     useEffect(() => {
         positions.current = new Float32Array(count * 3);
         for (let i = 0; i < count; i++) {
-            positions.current[i] = (Math.random() - 0.5) * 7;
+            positions.current[i] = (Math.random() - 0.5) * 10;
         }
         setForceUpdate(forceUpdate + 1);
     }, [count]);
