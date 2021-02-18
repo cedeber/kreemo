@@ -5,6 +5,7 @@ import { ShapesPage } from "./pages/Shapes";
 import { LightsPage } from "./pages/Lights";
 import { OffscreenPage } from "./pages/Offscreen";
 import { ParticlesPage } from "./pages/Particles";
+import { ShadersPage } from "./pages/Shaders";
 
 const App: React.FC = () => {
     return (
@@ -31,6 +32,11 @@ const App: React.FC = () => {
                             🎉 Particles
                         </NavLink>
                     </li>
+                    <li className="menu_item">
+                        <NavLink to="/shaders" activeClassName="active">
+                            ☂️ Shaders
+                        </NavLink>
+                    </li>
                     <li style={{ color: "gray" }}>&nbsp;&nbsp;/&nbsp;</li>
                     <li className="menu_item">
                         <a
@@ -55,6 +61,9 @@ const App: React.FC = () => {
                 </Route>
                 <Route path="/particles">
                     <ParticlesPage />
+                </Route>
+                <Route path="/shaders">
+                    <ShadersPage />
                 </Route>
                 <Route path="/offscreen">
                     <OffscreenPage />
