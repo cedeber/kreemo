@@ -34,7 +34,7 @@ const TexturedCube: React.FC<MeshProps> = (props) => {
     normalMap.repeat.set(repeat, repeat);
 
     useFrame(() => {
-        if (mesh.current && isAnimate) mesh.current.rotation.x = mesh.current.rotation.y += 0.01;
+        if (mesh.current && isAnimate) mesh.current.rotation.x = mesh.current.rotation.y += 0.001;
     });
 
     return (
