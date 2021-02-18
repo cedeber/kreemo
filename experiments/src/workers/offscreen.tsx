@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-three-fiber";
 import { WebGLRenderer, Scene, PerspectiveCamera } from "three";
-import { WorkerCube } from "../meshes/WorkerCube";
+import { WorkerCube } from "../objects/WorkerCube";
 
 let ctx = (self as unknown) as Worker;
 

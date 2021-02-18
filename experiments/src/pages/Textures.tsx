@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { Canvas } from "react-three-fiber";
 import { OrbitControls, PerspectiveCamera, Stats } from "@react-three/drei";
-import { TexturedCube } from "../meshes/TexturedCube";
+import { TexturedCube } from "../objects/TexturedCube";
 
 const TexturesPage: React.FC = () => {
     return (

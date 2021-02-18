@@ -1,8 +1,8 @@
 import React, { Suspense } from "react";
 import { Canvas } from "react-three-fiber";
 import { OrbitControls, PerspectiveCamera, Stats } from "@react-three/drei";
-import { SphereParticles } from "../meshes/SphereParticles";
-import { RandomParticles } from "../meshes/RandomParticles";
+import { SphereParticles } from "../objects/SphereParticles";
+import { RandomParticles } from "../objects/RandomParticles";
 
 const ParticlesPage: React.FC = () => {
     return (

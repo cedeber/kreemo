@@ -3,10 +3,10 @@ import { Canvas, useResource } from "react-three-fiber";
 import { OrbitControls, PerspectiveCamera, Stats } from "@react-three/drei";
 import { useDatGui } from "../hooks/useDatGui";
 import { MeshStandardMaterial, PointLight } from "three";
-import { Cube } from "../meshes/Cube";
-import { Torus } from "../meshes/Torus";
-import { Plane } from "../meshes/Plane";
-import { Text } from "../meshes/Text";
+import { Cube } from "../objects/Cube";
+import { Torus } from "../objects/Torus";
+import { Plane } from "../objects/Plane";
+import { Text } from "../objects/Text";
 
 const LightsPage: React.FC = () => {
     const light = useResource<PointLight>();

@@ -1,10 +1,10 @@
 import React, { Suspense } from "react";
 import { Canvas } from "react-three-fiber";
 import { PerspectiveCamera, Stats } from "@react-three/drei";
-import { Heart } from "../meshes/Heart";
+import { Heart } from "../objects/Heart";
 import { useStore } from "../store";
-import { Smiley } from "../meshes/Smiley";
-import { Text } from "../meshes/Text";
+import { Smiley } from "../objects/Smiley";
+import { Text } from "../objects/Text";
 
 const ShapesPage: React.FC = () => {
     const cursor = useStore((state) => state.cursor);
