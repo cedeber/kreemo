@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { Canvas } from "react-three-fiber";
-import { PerspectiveCamera, Stats } from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera, Stats } from "@react-three/drei";
 import { Heart } from "../objects/Heart";
 import { useStore } from "../store";
 import { Smiley } from "../objects/Smiley";
@@ -23,6 +23,7 @@ const ShapesPage: React.FC = () => {
                 <Text position={[0, 5, 0]} color={0xff00ff} />
             </Suspense>
             <PerspectiveCamera makeDefault fov={75} near={0.1} far={100} position={[0, 0, 20]} />
+            <OrbitControls />
             <Stats />
         </Canvas>
     );
