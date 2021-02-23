@@ -43,7 +43,7 @@ const PixiPage: React.FC = () => {
         for (let i = 0; i < count; i += 1) {
             shapes.push(
                 <PixiShape
-                    key={uuidv4()}
+                    key={`shape-${i}`}
                     app={app}
                     x={Math.random() * width}
                     y={Math.random() * height}

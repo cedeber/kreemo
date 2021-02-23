@@ -19,7 +19,7 @@ const ShapesPage: React.FC = () => {
 
         for (let i = 0; i < count; i += 1) {
             // h.push(<Heart key={uuidv4()} position={[randomX, randomY, 0]} />);
-            h.push(<ThreeShape key={uuidv4()} />);
+            h.push(<ThreeShape key={`shape-${i}`} />);
         }
 
         setHearts(h);
