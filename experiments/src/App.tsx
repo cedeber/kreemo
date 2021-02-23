@@ -6,6 +6,7 @@ import { LightsPage } from "./pages/Lights";
 import { OffscreenPage } from "./pages/Offscreen";
 import { ParticlesPage } from "./pages/Particles";
 import { ShadersPage } from "./pages/Shaders";
+import { PixiPage } from "./pages/Pixi";
 
 const App: React.FC = () => {
     return (
@@ -64,6 +65,9 @@ const App: React.FC = () => {
                 </Route>
                 <Route path="/shaders">
                     <ShadersPage />
+                </Route>
+                <Route path="/pixi">
+                    <PixiPage />
                 </Route>
                 <Route path="/offscreen">
                     <OffscreenPage />
