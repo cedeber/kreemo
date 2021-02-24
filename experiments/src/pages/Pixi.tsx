@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Application, Graphics, Rectangle } from "pixi.js";
 import { useDatGui } from "../hooks/useDatGui";
 import { PixiShape } from "../objects/PixiShape";
-import { uuidv4 } from "../utils";
 
 // Allows to reload the whole component when shaders change
 // @refresh reset
@@ -30,7 +29,7 @@ const PixiPage: React.FC = () => {
 
         window.addEventListener("resize", resize);
 
-        return function clenup() {
+        return function cleanup() {
             window.removeEventListener("resize", resize);
             app.destroy();
         };
