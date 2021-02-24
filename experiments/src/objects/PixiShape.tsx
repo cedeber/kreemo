@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef } from "react";
-import { Application, Graphics, Rectangle } from "pixi.js";
+import { Application, Graphics, Rectangle, RENDERER_TYPE } from "pixi.js-legacy";
 
 // Allows to reload the whole component when shaders change
 // @refresh reset
@@ -27,6 +27,7 @@ const PixiShape: React.FC<{ app: Application; x: number; y: number }> = (props) 
 
         if (shape == undefined) return;
 
+        shape.lineStyle(1, 0xffffff, 1, 0);
         shape.beginFill(0xde3249);
         shape.drawRect(-5, -5, 10, 10);
         shape.endFill();
@@ -48,9 +49,15 @@ const PixiShape: React.FC<{ app: Application; x: number; y: number }> = (props) 
     }, [_shape.current]);
 
     useEffect(() => {
+        const app = props.app;
         const shape = _shape.current;
-        shape.x = props.x;
-        shape.y = props.y;
+
+        // 0.5px is needed for line, but only for Canvas
+        // @see https://github.com/pixijs/pixi.js/issues/7130
+        const displacementFix = app.renderer.type === RENDERER_TYPE.WEBGL ? 0 : 0.5;
+
+        shape.x = Math.floor(props.x) + displacementFix;
+        shape.y = Math.floor(props.y) + displacementFix;
     }, [props.x, props.y]);
 
     return null;

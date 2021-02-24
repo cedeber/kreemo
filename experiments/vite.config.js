@@ -10,7 +10,7 @@ export default defineConfig({
                 manualChunks: {
                     react: ["react", "react-dom", "react-three-fiber", "@react-three/drei"],
                     three: ["three"],
-                    pixi: ["pixi.js"],
+                    pixi: ["pixi.js-legacy"],
                 },
             },
         },

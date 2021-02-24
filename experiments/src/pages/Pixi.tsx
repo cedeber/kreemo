@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { Application, Graphics, Rectangle } from "pixi.js";
+import { Application } from "pixi.js-legacy";
 import { useDatGui } from "../hooks/useDatGui";
 import { PixiShape } from "../objects/PixiShape";
 
