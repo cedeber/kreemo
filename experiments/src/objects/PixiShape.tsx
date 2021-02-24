@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef } from "react";
-import { Application, Graphics, Rectangle, RENDERER_TYPE } from "pixi.js-legacy";
+import { Application, Graphics, Rectangle, RENDERER_TYPE } from "pixi.js";
 
 // Allows to reload the whole component when shaders change
 // @refresh reset

@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { Application } from "pixi.js-legacy";
+import { Application } from "pixi.js";
 import { useDatGui } from "../hooks/useDatGui";
 import { PixiShape } from "../objects/PixiShape";
 
@@ -8,7 +8,7 @@ import { PixiShape } from "../objects/PixiShape";
 
 const app = new Application({
     antialias: true,
-    transparent: true,
+    backgroundAlpha: 0,
     resolution: Math.min(1, window.devicePixelRatio),
 });
 
